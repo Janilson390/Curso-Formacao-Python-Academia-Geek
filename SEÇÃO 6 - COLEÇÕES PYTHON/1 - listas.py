@@ -142,7 +142,6 @@ while produto != "sair":
 print(f"Há {len(carrinho)} itens da lista:")
 for item in carrinho:
     print(item)
-"""
 
 cores = ["verde", "amarelo", "azul", "branco"]
 
@@ -172,11 +171,13 @@ print(numeros[2:3:2])
 print(numeros[:4])
 print(numeros[::2])
 
+# Soma, valor minimio, máximo e o taamanho total de uma lista
 print(sum(numeros))
 print(min(numeros))
 print(max(numeros))
 print(len(numeros))
 
+# Decomposição de uma lista em vaariáveis
 num1, num2, num3, num4, num5, num6, num7 = numeros
 print(num1)
 print(num2)
@@ -185,3 +186,24 @@ print(num4)
 print(num5)
 print(num6)
 print(num7)
+
+"""
+# Deep Copy - A lista original não é alterada quando modifico a cópia
+lista20 = ["Banana", "Maçã"]
+print(lista20)
+nova = lista20.copy()
+print(nova)
+nova.append("Uva")
+nova.insert(0, "Melão")
+print(lista20)
+print(nova)
+
+# Shallow Copy - A lista original é alterada, mesmo se alterar a lista cópia
+lista21 = ["Banana", "Maçã"]
+print(lista21)
+nova2 = lista21
+print(nova2)
+nova2.append("Uva")
+nova2.insert(0, "Melão")
+print(lista21)
+print(nova2)
