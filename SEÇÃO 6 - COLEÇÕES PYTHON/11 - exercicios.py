@@ -36,16 +36,19 @@ for items in A:
 """
 print("3. Faça um programa que leia 10 valores, armazene-os em uma lista e apresente quantos valores pares ele possui.")
 
-lista = []
-cont = 1
-while cont <= 10:
-    lista.append(input(f"Digite o {cont}º valor: "))
+lista: list[int] = []
+lista_pares: list[int] = []
+cont: int = 1
+pares: int = 0
+
+while len(lista) < 10:
+    valor: int = int(input(f"Digite o {cont} valor: "))
+    lista.append(valor)
+
+    if valor % 2 == 0:
+        pares += 1
+        lista_pares.append(valor)
+
     cont += 1
 
-cont = 0
-
-for itens in lista:
-    if int(itens) % 2 == 0:
-        cont += 1
-
-print(f"Existem {cont} números pares nessa lista!")
+print(f"Existem {pares} números pares nessa lista e são eles: {lista_pares}.")
