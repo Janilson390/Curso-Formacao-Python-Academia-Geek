@@ -6,10 +6,10 @@ def colere (texto, cor):
         print(f"O texto {texto} será impresso na cor {cor}!")
     except ValueError:
         print(f"A cor precisa ser uma destas: {cores}!")
-    except TypeError as err:
+    except TypeError as err: # Nomeando a exceção
         if type(texto) is not str:
             print(f"O parametro \"texto\" precisa ser uma string! {err}")
-    except:
+    except: # Exceção genérica
         if type(cor) is not str:
             print(f"O parametro \"cor\" precisa ser uma string!")
 
