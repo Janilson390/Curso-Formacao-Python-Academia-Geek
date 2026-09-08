@@ -32,10 +32,12 @@ def nome_completo(nome, sobrenome):
 # print(multiplicação(2, 5, 6))
 # print(multiplicação(2, 5, " NaN ") + " BATMAN!")
 
-n = "Janilson"
-s = "Florencio"
-print(nome_completo(n, s))
-print(nome_completo(s, n))
+if __name__ == "__main__":
+    n = "Janilson"
+    s = "Florencio"
+    print(nome_completo(n, s))
+    print(nome_completo(s, n))
+
 # Nomeando os parâmetros
 print(f"Seu nome é {nome_completo(nome=n, sobrenome=s)}")
 print(f"Seu nome é {nome_completo(nome="Janilson", sobrenome="Florencio")}")
